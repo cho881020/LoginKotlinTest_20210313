@@ -2,6 +2,7 @@ package com.neppplus.loginkotlintest_20210313
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,15 @@ class MainActivity : AppCompatActivity() {
             val inputPw = pwEdt.text.toString()
 
 //        2. 두 변수를 갖고 조건문 활용
+//            => id : admin , pw : qwer 두개가 다 맞아야 로그인 성공.
+
+            if (inputId == "admin" && inputPw == "qwer") {
+//                관리자입니다. 토스트
+                Toast.makeText(this, "관리자입니다.", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
+            }
 
 
         }
